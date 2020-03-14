@@ -67,3 +67,53 @@ export const FormContainer = styled.div`
     padding: 28px 5px;
   }
 `;
+
+export const ListContainer = styled.div`
+
+  p {
+    margin: 0;
+    padding: 0 10px;
+    color: #666;
+    font-size: 17px;
+    height: 23px;
+  }
+
+  ul{
+    list-style-type: none;
+  }
+
+  ul li {
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+  }
+
+  ul li span {
+    flex: 1;
+    color: #333;
+  }
+
+  ul li button {
+    border: none;
+    margin: 0 5px;
+    padding: 0 5px;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  ul li button#conclude:hover {
+    color: #00a8ff;
+    cursor: pointer;
+  }
+
+  ul li button#delete {
+    font-size: 18px;
+  }
+
+  ul li button#delete:hover {
+    color: #eb4d4b;
+    cursor: pointer;
+  }
+
+`;
