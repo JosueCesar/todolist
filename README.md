@@ -1,6 +1,8 @@
 # TodoLuby
 
-O projeto ** TodoLuby ** é uma todo list feita, feito utilizando ** React, Formik, Yup, e Styled Components. **
+O projeto **TodoLuby** é uma todo list feita, feito utilizando **React, Formik, Yup, e Styled Components.**
+
+![Project Image Example](https://github.com/JosueCesar/todolist/blob/master/images/TodoScreen.png)
 
 ---
 ## Instalação
@@ -17,6 +19,6 @@ navegue até o diretório utilizando o terminal e execute o comando `yarn`.
 ## Execução
 
 Para executar a aplicação, você pode escolher entre modo de desenvolvimento e de aplicação,  
-com o comando `yarn dev` a aplicação iniciará em modo de ** desenvolvimento **, já com o comando `yarn build`,  
-será feita a construção do código da aplicação e irá ser montado em um arquivo ** bundle.js **, na pasta `public/`,  
+com o comando `yarn dev` a aplicação iniciará em modo de **desenvolvimento**, já com o comando `yarn build`,  
+será feita a construção do código da aplicação e irá ser montado em um arquivo **bundle.js**, na pasta `public/`,  
 e para executar a aplicação basta utilizar o arquivo `index.html` no mesmo diretório.  
