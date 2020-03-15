@@ -16,7 +16,7 @@ export default class Form extends Component {
     const { initialValues, handleSubmit } = this.props;
     return(
       <FormContainer>
-        <h1><GoChecklist/>TodoLuby</h1>
+        <h1><GoChecklist/>TodoList</h1>
         <Formik
           initialValues={initialValues}
           validationSchema={validation}
