@@ -20,4 +20,4 @@ navegue até o diretório utilizando o terminal e execute o comando `yarn`.
 
 ## Execução
 
-Para executar a aplicação, você pode escolher entre modo de desenvolvimento `yarn start`, e de aplicação, com o comando `yarn build`, será feita a construção do código da aplicação e irá ser montado em um arquivo **bundle.js**, na pasta `build/`, e para executar a aplicação basta usar o comando `npx serve -s build` no mesmo diretório do projeto, ou `npx serve -s` no diretório do build.
+Para executar a aplicação, você pode escolher entre modo de desenvolvimento `yarn start`, e de aplicação, com o comando `yarn build`, será feita a construção do código da aplicação e irá ser direcionado para a pasta `build/`, e para executar a aplicação basta usar o comando `npx serve -s build` no mesmo diretório do projeto, ou `npx serve -s` no diretório do build.
