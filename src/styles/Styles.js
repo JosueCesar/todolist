@@ -19,6 +19,10 @@ export const Container = styled.div`
   h2 {
     font-size: 20px;
   }
+
+  button {
+    background-color: transparent;
+  }
 `;
 export const FormContainer = styled.div`
   
