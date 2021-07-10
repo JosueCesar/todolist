@@ -1,4 +1,4 @@
-# TodoLuby
+# Todo
 
 O projeto **Todo** é uma todo list feita, feito utilizando **React, Typescript, Formik, Yup, e Styled Components.**
 
