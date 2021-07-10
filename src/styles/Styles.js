@@ -93,6 +93,10 @@ export const ListContainer = styled.div`
     color: #333;
   }
 
+  span.striked {
+    text-decoration: line-through;
+  }
+
   ul li button {
     border: none;
     margin: 0 5px;

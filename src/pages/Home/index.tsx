@@ -3,17 +3,11 @@ import React from 'react';
 import md5 from 'js-md5';
 
 import Form from '../../components/FormComponent';
-import List from '../../components/ListComponent';
+import List, { TaskProps } from '../../components/ListComponent'
 import { Container } from '../../styles/Styles';
 import { useState } from 'react';
 import { useCallback } from 'react';
 import { useEffect } from 'react';
-
-interface TaskProps {
-  id: string;
-  task: string;
-  pending: boolean;
-}
 
 const Home: React.FC = () => {
   const [tasks, setTasks] = useState<TaskProps[]>([]);
