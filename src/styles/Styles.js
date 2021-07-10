@@ -5,7 +5,7 @@ export const Container = styled.div`
   background-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
-  margin: 60px auto;
+  margin: 100px 20px;
   padding: 20px;
 
   h1, h2 {
@@ -18,10 +18,6 @@ export const Container = styled.div`
 
   h2 {
     font-size: 20px;
-  }
-
-  button {
-    background-color: transparent;
   }
 `;
 export const FormContainer = styled.div`
@@ -73,7 +69,6 @@ export const FormContainer = styled.div`
 `;
 
 export const ListContainer = styled.div`
-
   p {
     margin: 0;
     padding: 0 10px;
@@ -82,10 +77,20 @@ export const ListContainer = styled.div`
     height: 23px;
   }
 
+  li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & + li {
+      margin-top: 3px;
+    }
+  }
+
   ul{
     list-style-type: none;
   }
-
+  
   ul li {
     display: flex;
     flex-direction: row;
@@ -108,6 +113,12 @@ export const ListContainer = styled.div`
     font-size: 16px;
     justify-content: center;
     align-items: center;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
   }
   
   ul li button#conclude:hover {

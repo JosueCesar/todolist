@@ -11,5 +11,9 @@ export default createGlobalStyle`
 
   body {
     background-color: #24252a;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
