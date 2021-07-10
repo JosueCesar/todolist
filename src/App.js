@@ -4,10 +4,10 @@ import Routes from './routes';
 import GlobalStyle from './styles/Global';
 
 const app = () => {
-  return(
+  return (
     <>
       <Routes />
-      <GlobalStyle/>
+      <GlobalStyle />
     </>
   );
 }
