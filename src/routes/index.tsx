@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Main from './pages/Main';
+import Main from '../pages/Home';
 
-export default function Routes() {
+const Routes: React.FC = () => {
   return (
     <BrowserRouter>
       <Switch>
@@ -11,4 +11,6 @@ export default function Routes() {
       </Switch>
     </BrowserRouter>
   );
-} 
+}
+
+export default Routes;

@@ -3,7 +3,7 @@ import React from 'react';
 import Routes from './routes';
 import GlobalStyle from './styles/Global';
 
-const app = () => {
+const App: React.FC = () => {
   return (
     <>
       <Routes />
@@ -12,4 +12,4 @@ const app = () => {
   );
 }
 
-export default app;
+export default App;

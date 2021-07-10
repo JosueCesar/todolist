@@ -1,6 +1,6 @@
 # TodoLuby
 
-O projeto **TodoLuby** é uma todo list feita, feito utilizando **React, Formik, Yup, e Styled Components.**
+O projeto **TodoLuby** é uma todo list feita, feito utilizando **React, Typescript, Formik, Yup, e Styled Components.**
 
 ![Project Image Example](https://github.com/JosueCesar/todolist/blob/master/images/TodoScreen.png)
 
