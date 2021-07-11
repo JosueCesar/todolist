@@ -1,47 +1,19 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
-import md5 from 'js-md5';
 
 import Form from '../../components/FormComponent';
-import List, { TaskProps } from '../../components/ListComponent'
+import List from '../../components/ListComponent';
+import { useTasks } from '../../hooks/tasks';
 import { Container } from '../../styles/Styles';
-import { useState } from 'react';
-import { useCallback } from 'react';
-import { useEffect } from 'react';
 
 const Home: React.FC = () => {
-  const [tasks, setTasks] = useState<TaskProps[]>([]);
-
-  const handleSubmit = useCallback(({ task }: any) => {
-    setTasks(oldValue => [
-      ...oldValue, {
-        id: md5(task + new Date().getTime()),
-        task,
-        pending: true,
-      }
-    ]);
-  }, []);
-
-  const handleDelete = useCallback((id: string) => {
-    setTasks(oldValue => oldValue.filter(task => task.id !== id));
-  }, []);
-
-  const handleConclude = useCallback((id: string) => {
-    setTasks(oldState => oldState.map(task => task.id === id ? { ...task, pending: !task.pending } : task))
-  }, [tasks]);
-
-  useEffect(() => {
-    let a = new Array(10).fill(0);
-    a.forEach((_v, i) =>{
-      handleSubmit({ task: 'teste ' + i })
-    })
-  }, [])
+  const { tasks, addTask, removeTask, handlePending } = useTasks();
 
   return (
     <Container>
       <Form
         initialValues={{ task: '' }}
-        handleSubmit={handleSubmit}
+        handleSubmit={({ task }) => addTask(task)}
       />
 
       <hr />
@@ -49,16 +21,16 @@ const Home: React.FC = () => {
       <List
         title='To do'
         titleIcon=""
-        deleteTask={handleDelete}
-        concludeTask={handleConclude}
+        deleteTask={removeTask}
+        concludeTask={handlePending}
         tasks={tasks.filter(task => task.pending)}
       />
 
       <List
         title='Done'
         titleIcon=""
-        deleteTask={handleDelete}
-        concludeTask={handleConclude}
+        deleteTask={removeTask}
+        concludeTask={handlePending}
         tasks={tasks.filter(task => task.pending === false)}
       />
     </Container>

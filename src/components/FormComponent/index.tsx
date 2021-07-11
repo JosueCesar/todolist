@@ -5,6 +5,7 @@ import { GoPlus } from 'react-icons/go';
 import { GoChecklist } from 'react-icons/go';
 import { FormContainer } from '../../styles/Styles';
 import * as yup from 'yup';
+import { TaskProps } from '../../hooks/tasks';
 
 const validation = yup.object().shape({
   task: yup.string().min(5).required('Todo name is required') 
@@ -12,7 +13,7 @@ const validation = yup.object().shape({
 
 interface FormProps {
   initialValues: any;
-  handleSubmit(e: React.FormEvent<HTMLFormElement>): void;
+  handleSubmit(e: Omit<TaskProps, 'id' | 'pending'>): void;
 }
 
 const Form: React.FC<FormProps> = ({ initialValues, handleSubmit }) => {

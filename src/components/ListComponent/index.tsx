@@ -4,13 +4,7 @@ import { MdRadioButtonChecked } from 'react-icons/md';
 import { MdDelete } from 'react-icons/md';
 
 import { ListContainer } from '../../styles/Styles';
-
-export interface TaskProps {
-  id: string;
-  task: string;
-  pending: boolean;
-}
-
+import { TaskProps } from '../../hooks/tasks';
 export interface ListProps {
   title: string;
   titleIcon?: string;
