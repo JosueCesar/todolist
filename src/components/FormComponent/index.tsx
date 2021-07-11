@@ -11,12 +11,12 @@ const validation = yup.object().shape({
   task: yup.string().min(5).required('Todo name is required') 
 });
 
-interface FormProps {
-  initialValues: any;
-  handleSubmit(e: Omit<TaskProps, 'id' | 'pending'>): void;
+interface FormProps<T> {
+  initialValues: T;
+  handleSubmit(value: T): void;
 }
 
-const Form: React.FC<FormProps> = ({ initialValues, handleSubmit }) => {
+const Form: React.FC<FormProps<Omit<TaskProps, 'id' | 'pending'>>> = ({ initialValues, handleSubmit }) => {
   return(
     <FormContainer>
       <h1><GoChecklist/>TodoList</h1>
